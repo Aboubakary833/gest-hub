@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="w-full h-[calc(100vh-61px)] flex">
+	<aside class="w-64 h-full hidden lg:flex flex-col justify-between bg-white px-2 py-4">
+		<div id="links">
+			<app-link path="/" customClass="mb-2">
+				<lucide-icon name="home" class="w-5 h-5"></lucide-icon>
+				<span class="ml-2">Home Feed</span>
+			</app-link>
+			<app-link path="/share" customClass="mb-2">
+				<lucide-icon name="image-plus" class="w-5 h-5"></lucide-icon>
+				<span class="ml-2">Publish a work</span>
+			</app-link>
+			<app-link path="/followers" customClass="mb-2">
+				<lucide-icon name="users-2" class="w-5 h-5"></lucide-icon>
+				<span class="ml-2">Followers</span>
+			</app-link>
+			<app-link path="/following" customClass="mb-2">
+				<lucide-icon name="rss" class="w-5 h-5"></lucide-icon>
+				<span class="ml-2">Following</span>
+			</app-link>
+		</div>
+		<div class="ads">
+			<!-- Ads goes there -->
+		</div>
+	</aside>
+	<main class="w-full h-full p-4 md:p-6 overflow-y-scroll">
+		<div class="bg-white rounded-lg p-4">
+			<ng-content></ng-content>
+		</div>
+	</main>
+</div>

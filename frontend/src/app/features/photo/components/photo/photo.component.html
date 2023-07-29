@@ -1,0 +1,28 @@
+<app-layout>
+	<div class="grid grid-cols-1 md:grid-cols-2 rounded-xl">
+		<figure class="max-h-[520px] relative">
+			<img src="{{ url }}" class="w-full h-full align-middle inline-block object-cover rounded-l-xl" alt="Ai cat">
+			<div class="bg-primary absolute top-0 left-0">
+	
+			</div>
+		</figure>
+		<div class="h-full px-4">
+			<div class="w-full bg-gray-50/75 rounded-xl border">
+				<div class="w-full px-2 py-1 border-b flex justify-between items-center">
+					<div class="flex items-center text-gray-700">
+						<lucide-icon name="message-square" class="w-6 h-6 stroke-slate-500"></lucide-icon>
+						<span class="indent-2 text-sm">204 commentaires</span>
+					</div>
+					<div>
+						<app-button variant="ghost" customClass="w-10 h-10">
+							<lucide-icon name="heart" class="w-6 h-6 stroke-slate-500"></lucide-icon>
+						</app-button>
+					</div>
+				</div>
+				<div class="p-4 h-fill">
+
+				</div>
+			</div>
+		</div>
+	</div>
+</app-layout>

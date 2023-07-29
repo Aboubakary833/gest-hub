@@ -1,0 +1,32 @@
+<div class="m-2 flex flex-col bg-white h-fit rounded-xl">
+	<figure class="max-h-[500px] md:max-h-[360px] overflow-y-hidden rounded-xl relative cursor-pointer">
+		<img src="{{ url }}" class="max-w-full h-full align-middle inline-block object-fill rounded-xl" alt="Ai cat">
+		<div class="w-full h-full p-2 flex flex-col justify-between opacity-0 hover:opacity-100 hover:bg-gray-800/30 absolute top-0 left-0 transition-all">
+			<div class="flex justify-end items-center">
+				<app-button variant="ghost" size="sm" customClass="w-10 h-10">
+					<lucide-icon name="heart" class="w-5 h-5" strokeWidth="1.5"></lucide-icon>
+				</app-button>
+				<app-button variant="ghost" size="sm" customClass="ml-2 w-10 h-10">
+					<lucide-icon name="bookmark" class="w-5 h-5" strokeWidth="1.5"></lucide-icon>
+				</app-button>
+			</div>
+			<figcaption class="text-sm font-medium text-white">Lorem ipslum dolor sit</figcaption>
+		</div>
+	</figure>
+	<div class="my-2 flex justify-between">
+		<a href="#" class="flex items-center text-sm font-medium">
+			<app-avatar size="sm"></app-avatar>
+			<span class="indent-1">John Doe</span>
+		</a>
+		<div class="flex">
+			<a href="#" class="inline-flex items-center">
+				<span class="text-[13px] text-gray-700">50</span>
+				<lucide-icon name="heart" class="w-4 h-4 stroke-none fill-danger" strokeWidth="1.5"></lucide-icon>
+			</a>
+			<a href="#" class="ml-4 inline-flex items-center">
+				<span class="text-[13px] text-gray-700">11</span>
+				<lucide-icon name="message-square" class="w-4 h-4" strokeWidth="1.5"></lucide-icon>
+			</a>
+		</div>
+	</div>
+</div>

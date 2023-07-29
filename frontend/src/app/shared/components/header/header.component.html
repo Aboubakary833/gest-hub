@@ -1,0 +1,51 @@
+<header class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-b-slate-100 text-sm py-3 dark:bg-gray-800">
+	<nav class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
+		<div class="w-full flex items-center justify-between">
+			<div class="flex items-center">
+				<div class="sm:hidden">
+					<button type="button"
+						class="hs-collapse-toggle p-[2px] mr-1 inline-flex justify-center items-center gap-2 rounded-md font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary transition-all text-sm"
+						data-hs-collapse="#navbar-alignment" aria-controls="navbar-alignment"
+						aria-label="Toggle navigation">
+						<lucide-icon name="align-justify" class="w-6 h-6"></lucide-icon>
+					</button>
+				</div>
+				<a class="inline-flex items-center gap-x-2 text-3xl font-bold dark:text-white" href="#">
+					<img src="assets/logo.svg" alt="GestHub" class="w-8 h-8">
+					<p class="hidden sm:block"><span>Gest</span>
+						<span class="text-primary">Hub</span>
+					</p>
+				</a>
+			</div>
+			<div class="flex items-center">
+				<nav class="flex">
+					<a class="w-fit h-fit relative p-2 rounded-full hover:bg-gray-100 active:bg-gray-200 cursor-pointer">
+						<lucide-icon name="message-circle" class="text-gray-800 w-5 h-5" [strokeWidth]="1"></lucide-icon>
+						<div class="absolute top-1 right-0 w-4 h-4 bg-danger text-white flex justify-center items-center text-[10px] rounded-full">4</div>
+					</a>
+					<a class="ml-1 sm:ml-2 w-fit h-fit p-2 rounded-full hover:bg-gray-100 active:bg-gray-200 cursor-pointer">
+						<lucide-icon name="bookmark" class="text-gray-800 w-5 h-5" [strokeWidth]="1">bookmark</lucide-icon>
+					</a>
+					<a class="ml-1 sm:ml-2 relative w-fit h-fit p-2 rounded-full hover:bg-gray-100 active:bg-gray-200 cursor-pointer">
+						<lucide-icon name="bell" class="text-gray-800 w-5 h-5" [strokeWidth]="1"></lucide-icon>
+						<div class="absolute top-1 right-0 w-4 h-4 bg-danger text-white flex justify-center items-center text-[10px] rounded-full">2</div>
+					</a>
+				</nav>
+				<div class="ml-4 hs-dropdown relative inline-flex">
+					<button id="hs-dropdown-with-dividers" type="button" class="flex items-center hs-dropdown-toggle focus-visible:ring-0">
+						<app-avatar [url]="'assets/user.png'" [alt]="'user'"></app-avatar>
+						<p class="indent-3 hidden md:flex md:flex-col">
+							<span class="text-left font-semibold text-gray-950">John Doe</span>
+							<span class="text-xs text-gray-700">johndoe@gmail.com</span>
+						</p>
+						<lucide-icon name="chevron-down" class="ml-[3px] text-gray-800 w-4 h-4"></lucide-icon>
+					</button>
+
+					<div class="hs-dropdown-menu hidden transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 min-w-[13rem] bg-white shadow-md rounded-b-lg p-2 mt-2 divide-y divide-gray-200" aria-labelledby="hs-dropdown-with-dividers">
+						<!-- Dropdown links goes there ... -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>

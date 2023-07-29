@@ -1,0 +1,3 @@
+<a [routerLink]="path" [ngClass]="'w-full h-10 px-4 py-2 flex items-center text-sm font-medium hover:bg-gray-200/75 text-gray-950 rounded-xl' | cm : (router.url === path) ? 'bg-primary hover:bg-primary-700 text-white ' + customClass : '' + customClass">
+	<ng-content></ng-content>
+</a>
