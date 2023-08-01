@@ -15,11 +15,11 @@ public class Like {
   )
   private UUID id;
 
-  @OneToOne
+  @ManyToOne
   @JoinColumn(name="author_id")
   public User author;
 
-  @OneToOne
+  @ManyToOne
   @JoinColumn(name="photo_id")
   public Photo photo;
 

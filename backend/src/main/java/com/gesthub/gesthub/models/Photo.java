@@ -2,6 +2,7 @@ package com.gesthub.gesthub.models;
 
 import jakarta.persistence.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity(name = "Photo")
@@ -22,12 +23,15 @@ public class Photo {
   )
   public String url;
 
-  @OneToOne
+  @ManyToOne
   @JoinColumn(name = "user_id")
   private User user;
 
-  @OneToMany
-  public Comment comments;
+  @OneToMany(mappedBy = "photo")
+  public List<Comment> comments;
+
+  @OneToMany(mappedBy = "photo")
+  public List<Like> likes;
 
   public Photo() {
   }
