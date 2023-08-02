@@ -1,6 +1,9 @@
 package com.gesthub.gesthub.models;
 
 import jakarta.persistence.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -8,6 +11,9 @@ import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
+@Getter
+@Setter
+@Builder
 @Entity(name = "User")
 @Table(name = "users")
 public class User implements UserDetails {
@@ -24,14 +30,14 @@ public class User implements UserDetails {
     columnDefinition = "varchar(255)",
     nullable = false
   )
-  public String firstname;
+  private String firstname;
 
   @Column(
     name = "lastname",
     columnDefinition = "varchar(255)",
     nullable = false
   )
-  public String lastname;
+  private String lastname;
 
   @Column(
     name = "email",
@@ -39,14 +45,14 @@ public class User implements UserDetails {
     nullable = false,
     unique = true
   )
-  public String email;
+  private String email;
 
   @Column(
     name = "avatar",
-    columnDefinition = "varchar(255)",
+    columnDefinition = "varchar(255) default avatar.png",
     nullable = false
   )
-  public String avatar;
+  private String avatar = "avatar.png";
 
   @Column(
     name = "password",
@@ -66,54 +72,14 @@ public class User implements UserDetails {
     this.password = password;
   }
 
-  public UUID getId() {
-    return this.id;
-  }
-
-  public String getFirstname() {
-    return firstname;
-  }
-
-  public void setFirstname(String firstname) {
-    this.firstname = firstname;
-  }
-
-  public String getLastname() {
-    return lastname;
-  }
-
-  public void setLastname(String lastname) {
-    this.lastname = lastname;
-  }
-
-  public String getEmail() {
-    return email;
-  }
-
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
-  public String getAvatar() {
-    return avatar;
-  }
-
-  public void setAvatar(String avatar) {
-    this.avatar = avatar;
-  }
-
   @Override
   public Collection<? extends GrantedAuthority> getAuthorities() {
     return null;
   }
 
-  public String getPassword() {
-    return password;
-  }
-
   @Override
   public String getUsername() {
-    return null;
+    return this.email;
   }
 
   @Override
